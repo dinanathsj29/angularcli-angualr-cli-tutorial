@@ -52,6 +52,9 @@ Topics included/covered
     - 1.2. [Why use Angular CLI](#12-why-use-angular-cli)
     - 1.3. [Benefits Advantages of Angular CLI](#13-benefits-advantages-of-angular-cli)
 2. [Getting Started with Angular CLI](#02-Getting-Started-with-Angular-CLI)
+    - 2.1. [Pre-requisites](#21-pre-requisites)
+    - 2.2. [Tools required to install Angular CLI](#22-tools-required-to-install-angular-cli)
+    - 2.3. [Steps to Setup the Angular CLI development environment](#23-steps-to-setup-the-angular-cli-development-environment)
 
 01 Angular CLI Introduction
 =====================
@@ -79,8 +82,8 @@ Angular CLI eases and makes Angular app/project development process faster.
 
 | **without Angular CLI**                   | **with Angular CLI**                      |
 | ------------------------------------------|-------------------------------------------|
-| **We have to do the setup manually**: like download zip/executable/library files, extract and follow specific installation process add and edit framework/library configuration files etc. according to the project and                |  Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time 
-
+| **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and  | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
+ 
 1.3. Benefits Advantages of Angular CLI
 ---------------------
 
@@ -89,3 +92,50 @@ Angular CLI eases and makes Angular app/project development process faster.
 - Setup up the Angular Development environment
 - Provides required configuration files (angular.json or angular-cli.json) for Angular project/program
 - Reduces development efforts tremendously (eliminates manual entries in configuration/index or startup files)
+
+02 Getting Started with Angular CLI
+=====================
+
+2.1. Pre-requisites
+---------------------
+- Node 6.9.0 or higher (website: https://nodejs.org/en) 
+- NPM 3 or higher (Node Package Manager - comes inbuilt with Node)
+- Basic familiarity with Angular must (Angular 2 and above)
+
+2.2. Tools required to install Angular CLI
+---------------------
+In this section, we will list/understand the different tools/Softwares/utilities required to set up a local development environment of Angular CLI.
+
+- `Node`, (website: https://nodejs.org/en) 
+- `NPM`, (Node Package Manager - comes inbuilt with Node)
+- `Angular CLI = Command Line Interface`, Angular CLI (Command Line Interface) for angular (website:  https://cli.angular.io/), 
+    - it allows the developer to build/generate building blocks of angular application like component, services, routings, modules, etc. with best practices quicker and easier)
+- `Text Editor`
+    - Visual Studio Code / Visual Studio Code Insiders (website: https://code.visualstudio.com)
+    - Sublime Text, 
+    - Atom, 
+    - Brackets etc.
+
+2.3. Steps to Setup the Angular CLI development environment
+---------------------
+In this section, we will learn how to set up a local development environment of Angular CLI to start developing Angular apps with Angular CLI.
+
+1. Download and Install latest node (node comes with npm) (website: https://nodejs.org/en)
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/2.3.1-nodejs.png" alt="nodejs website" title="nodejs website" width="600" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Nodejs website - https://nodejs.org/en</figcaption>
+  </figure>
+</p>
+
+2. After installation check installed version of node and npm or verify installation by using command: `node -v` / `node --version` OR `npm -v` / `npm --version`
+3. Install Angular CLI (website https://cli.angular.io/) by using command: `npm install -g @angular/cli` (it will install Angular CLI globally (-g))
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/2.3.2-angular_cli.png" alt="Angular CLI website" title="Angular CLI website" width="600" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI website - https://cli.angular.io/</figcaption>
+  </figure>
+</p>
+
+4. After installation check version of angular CLI or verify installation by using command by using the command: `ng -v` OR `ng --version` (the command returns versions of Angular CLI, node/npm as well as operating system installed on your local machine), you can also verify angular CLI installation by command: `ng` OR `ng --help`
