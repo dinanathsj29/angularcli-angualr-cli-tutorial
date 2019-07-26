@@ -48,12 +48,10 @@ After completing/attending this Course/Tutorial, participants should be able to:
 Topics included/covered
 ===================== 
 1. [Angular CLI Introduction](#01-angular-cli-introduction)
-    - 1.1. [What is Angular CLI](#11-what-is-angular-cli)
-    - 1.2. [Why use Angular CLI](#12-why-use-angular-cli)
-    - 1.3. [Benefits/Advantages of Angular CLI](#13.-benefits/advantages-of-angular-cli)
+    - 1.1. [What is Angular CLI](#11.-what-is-angular-cli)
+    - 1.2. [Why use Angular CLI](#12.-why-use-angular-cli)
+    - 1.3. [Benefits Advantages of Angular CLI](#13.-benefits-advantages-of-angular-cli)
 2. [Getting Started with Angular CLI](#02-Getting-Started-with-Angular-CLI)
-3. [Angular CLI Commands](#03-angular-cli-commands)
-4. [Demo Angular Application using Angular CLI](#04-demo-angular-application-using-angular-cli)
 
 01 Angular CLI Introduction
 =====================
@@ -83,7 +81,7 @@ Angular CLI eases and makes Angular app/project development process faster.
 | ------------------------------------------|-------------------------------------------|
 | **We have to do the setup manually**: like download zip/executable/library files, extract and follow specific installation process add and edit framework/library configuration files etc. according to the project and                |  Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time 
 
-1.3. Benefits/Advantages of Angular CLI
+1.3. Benefits Advantages of Angular CLI
 ---------------------
 
 1.3. What Angular CLI does?
