@@ -48,7 +48,7 @@ After completing/attending this Course/Tutorial, participants should be able to:
 Topics included/covered
 ===================== 
 1. [Angular CLI Introduction](#01-angular-cli-introduction)
-    - 1.1. [What is Angular CLI](#1.1-what-is-angular-cli)
+    - 1.1. [What is Angular CLI](#1-1-what-is-angular-cli)
     - 1.2. [Why to use Angular CLI](#1.2.-why-to-use-angular-cli)
     - 1.3. [Benefits/Advantages of Angular CLI](#1.3.-benefits/advantages-of-angular-cli)
 2. [Getting Started with Angular CLI](#02-Getting-Started-with-Angular-CLI)
@@ -58,7 +58,7 @@ Topics included/covered
 01 Angular CLI Introduction
 =====================
 
-1.1 What is Angular CLI
+1.1. What is Angular CLI
 --------------------- 
 - `Angular CLI = Angular Command Line Interface`, its Command Line utility for Angular (website:  https://cli.angular.io/)
   - Angular CLI is Command Line Interface/Tool for creating, serving and managing Angular projects
