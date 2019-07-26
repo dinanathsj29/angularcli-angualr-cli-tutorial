@@ -48,9 +48,9 @@ After completing/attending this Course/Tutorial, participants should be able to:
 Topics included/covered
 ===================== 
 1. [Angular CLI Introduction](#01-angular-cli-introduction)
-    - 1.1. [What is Angular CLI](#11.-what-is-angular-cli)
-    - 1.2. [Why use Angular CLI](#12.-why-use-angular-cli)
-    - 1.3. [Benefits Advantages of Angular CLI](#13.-benefits-advantages-of-angular-cli)
+    - 1.1. [What is Angular CLI](#11-what-is-angular-cli)
+    - 1.2. [Why use Angular CLI](#12-why-use-angular-cli)
+    - 1.3. [Benefits Advantages of Angular CLI](#13-benefits-advantages-of-angular-cli)
 2. [Getting Started with Angular CLI](#02-Getting-Started-with-Angular-CLI)
 
 01 Angular CLI Introduction
