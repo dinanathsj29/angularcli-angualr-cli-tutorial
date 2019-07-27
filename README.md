@@ -58,6 +58,7 @@ Topics included/covered
 3. [Angular CLI Commands and Utilities](#03-angular-cli-commands-and-utilities)
     - 3.1. [Angular CLI Create new project/App - ng new](#31-angular-cli-create-new-project)
     - 3.2. [Angular CLI getting help - ng help](#32-angular-cli-getting-help)
+    - 3.3. [Angular CLI configuration file - angular.json](#33-angular-cli-configuration-file)
 
 <!--4. [Demo - Angular Application using Angular CLI](#04-components)
 5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
@@ -171,12 +172,21 @@ In this section, we will learn how to set up a local development environment of 
 <br/> example: command: `ng serve --port 4500`
 5. Go to the browser and launch/check Angular App by entering the web address: `localhost:4200` OR `localhost:4500`
 
-Watch/live reload mode
----------------------
+### Watch/live reload mode
 **Angular CLI application runs in `watch/live reload mode`** which simply means when you make any changes in application files and perform save, browser/app refresh and load the latest code automatically.
 
-Angular CLI commands widely used with Angular app
----------------------
+### Table: Angular CLI new command options
+| **Angular CLI new command option**        | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d     | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
+| ng new app-name --skip-install <br/> ng new app-name --skipInstall <br/> ng new app-name -si                             | When true, `does not install dependency packages i.e. node_modules folder` |
+| ng new app-name --skip-test <br/> ng new app-name --skipTest <br/> ng new app-name -st <br/> ng new app-name -S          | `does not generate "spec.ts" test files` for the new project |
+| ng new app-name --inline-style <br/> ng new app-name --inlineStyle <br/> ng new app-name -is <br/> ng new app-name -s          | When true, `includes styles inline in the component .TS file itsleft` (No seperate .css/scss styles files created). By default, an external styles file is created and referenced in the component .TS file. |
+| ng new app-name --inline-template <br/> ng new app-name --inlineTemplate <br/> ng new app-name -it <br/> ng new app-name -t          | When true, `includes template inline in the component .TS itsleft` (No seperate .html template files created). By default, an external template file is created and referenced in the component .TS file. |
+
+- Reference: https://angular.io/cli/new
+
+### Table: Angular CLI commands widely used with Angular app
 | **Angular CLI command**                   | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
 | ng new app-name                           | To create new angular app/project         |
@@ -200,8 +210,7 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
   </figure>
 </p>
 
-Angular CLI help commands
----------------------
+### Table: Angular CLI help commands
 | **Angular CLI command**                   | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
 | ng help OR ng -h                          | To get Angular CLI help                   |
@@ -216,3 +225,37 @@ Angular CLI help commands
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI - Command specific Help</figcaption>
   </figure>
 </p>
+
+- Reference: https://angular.io/cli/help
+
+3.3. Angular CLI configuration file
+---------------------
+In this section, we will discuss the significance and importance of the Angular CLI configuration file ( older angular versions `2/4/5 = .angular-cli.json`, in latest angular version `6/7/8 = configuration file named as angular.json` ) 
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/3.3.1-angular-cli-configuration-json-file.png" alt="Angular CLI - configuration json file - angular.json" title="Angular CLI - configuration json file - angular.json" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI - configuration json file - angular.json</figcaption>
+  </figure>
+</p>
+
+### angular.json settings are used when we:
+- Generate angular features likes components, pipes, services, using stylesheets, etc.
+- Run unit and end-to-end tests
+- Build the application etc.
+
+### Table: angular.json settings and their purpose
+---------------------
+| Setting                       | Purpose                                   | 
+|-------------------------------|-------------------------------------------|
+| defaultProject        | Name of the project                       |
+| projects: root/sourceRoot        | The root directory of the application, default is `src` |
+| projects: outputPath            | The output directory for build results, default is `dist` | 
+| projects: assets                | List of application assets that you want to copy when building your project. By default, the `src/assets/` folder and `src/favicon.ico` are copied over | 
+| projects: index                  | The name of the start HTML file which is by default `index.html`  |
+| projects: main                  | The name of the main entry-point file, which is `main.ts` by default | 
+| projects: tsConfig              | The `TypeScript` configuration file | 
+| projects: polyfills              | The name of the `polyfills` file. Angular is built on the latest standards of the web platform. Targeting such a wide range of browsers is challenging because not all browsers support all features of modern browsers. This can be compensated by using polyfill scripts that implement missing features in JavaScript |
+| projects: styles                | Global styles to be included in the build, default is `styles.css`. We can also use `less` or `scss`. To change to less or scss/sass, use the `"style"` option when generating a new angular project using the `"ng new"` command |
+
+- Reference: https://angular.io/guide/workspace-config
