@@ -91,7 +91,7 @@ Angular CLI eases and makes Angular app/project development process faster.
 
 | **without Angular CLI**                   | **with Angular CLI**                      |
 | ------------------------------------------|-------------------------------------------|
-| **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and  | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
+| **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and requirements <img width="250px" /> | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
 
 </div>
  
@@ -185,7 +185,7 @@ In this section, we will learn how to set up a local development environment of 
 
 | **Angular CLI new command option**        | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
-| ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d     | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
+| ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d <img width="600px" />    | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
 | ng new app-name --skip-install <br/> ng new app-name --skipInstall <br/> ng new app-name -si                             | When true, `does not install dependency packages i.e. node_modules folder` |
 | ng new app-name --skip-test <br/> ng new app-name --skipTest <br/> ng new app-name -st <br/> ng new app-name -S          | `does not generate "spec.ts" test files` for the new project |
 | ng new app-name --inline-style <br/> ng new app-name --inlineStyle <br/> ng new app-name -is <br/> ng new app-name -s          | When true, `includes styles inline in the component .TS file itsleft` (No seperate .css/scss styles files created). By default, an external styles file is created and referenced in the component .TS file. |
@@ -207,7 +207,7 @@ In this section, we will learn how to set up a local development environment of 
 | ng serve --open OR ng serve -o            | To run/serve angular app in default browser |
 | ng lint                                   | To run lint/syntax checker                |   
 | ng test                                   | To run unit test                          |    
-| ng e2e                                    | To run End-to-End test                    |          
+| ng e2e <img width="250px" />              | To run End-to-End test                    |          
 
 </div>
 
@@ -232,7 +232,7 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
 | ------------------------------------------|-------------------------------------------|
 | ng help OR ng -h                          | To get Angular CLI help                   |
 | ng version --help                         | To get command-specific help              |
-| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file |  
+| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc <img width="350px" />            | To paste help content text to an external file, to redirect help command output to desired file |  
 
 <!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
 
@@ -269,7 +269,7 @@ In this section, we will discuss the significance and importance of the Angular 
 
 | Setting                       | Purpose                                   | 
 |-------------------------------|-------------------------------------------|
-| defaultProject                | Name of the project                       |
+| defaultProject <img width="550px" />                | Name of the project                       |
 | projects: root/sourceRoot        | The root directory of the application, default is `src` |
 | projects: outputPath            | The output directory for build results, default is `dist` | 
 | projects: assets                | List of application assets that you want to copy when building your project. By default, the `src/assets/` folder and `src/favicon.ico` are copied over | 
