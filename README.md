@@ -74,7 +74,7 @@ Topics included/covered
 
 **Angular CLI is Angular command line tool helps to:**
 - Create Angular applications faster and with great consistency
-- Create the boilerplate code for angular features like Components, Services, Directives, Routing and Navigation, Pipes, Modules`, etc.
+- Create the boilerplate code for angular features like `Components, Services, Directives, Routing and Navigation, Pipes, Modules`, etc.
 - Creates boilerplate code TypeScript features like Classes, Interfaces, enums
 - Angular CLI follows angulars best practices and conventions out of the box
 - Run Unit and End-to-End(e2e) tests
@@ -206,8 +206,9 @@ Angular CLI help commands
 | ------------------------------------------|-------------------------------------------|
 | ng help OR ng -h                          | To get Angular CLI help                   |
 | ng version --help                         | To get command-specific help              |
-<!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
 | ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file |  
+
+<!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
 
 <p>
   <figure>
