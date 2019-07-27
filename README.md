@@ -55,6 +55,12 @@ Topics included/covered
     - 2.1. [Pre-requisites](#21-pre-requisites)
     - 2.2. [Tools required to install Angular CLI](#22-tools-required-to-install-angular-cli)
     - 2.3. [Steps to Setup the Angular CLI development environment](#23-steps-to-setup-the-angular-cli-development-environment)
+3. [Angular CLI Commands and Utilities](#03-angular-cli-commands-and-utilities)
+    - 3.1. [Angular CLI Create new project/App - ng new](#31-angular-cli-create-new-project)
+    - 3.2. [Angular CLI getting help - ng help](#32-angular-cli-getting-help)
+
+<!--4. [Demo - Angular Application using Angular CLI](#04-components)
+5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
 
 01 Angular CLI Introduction
 =====================
@@ -92,6 +98,7 @@ Angular CLI eases and makes Angular app/project development process faster.
 - Setup up the Angular Development environment
 - Provides required configuration files (angular.json or angular-cli.json) for Angular project/program
 - Reduces development efforts tremendously (eliminates manual entries in configuration/index or startup files)
+- Generates Angular project scaffolding/structure on the fly with proper, standard configuration
 
 02 Getting Started with Angular CLI
 =====================
@@ -123,19 +130,88 @@ In this section, we will learn how to set up a local development environment of 
 1. Download and Install latest node (node comes with npm) (website: https://nodejs.org/en)
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/2.3.1-nodejs.png" alt="nodejs website" title="nodejs website" width="600" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/2.3.1-nodejs.png" alt="nodejs website" title="nodejs website" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Nodejs website - https://nodejs.org/en</figcaption>
   </figure>
 </p>
 
 2. After installation check installed version of node and npm or verify installation by using command: `node -v` / `node --version` OR `npm -v` / `npm --version`
-3. Install Angular CLI (website https://cli.angular.io/) by using command: `npm install -g @angular/cli` (it will install Angular CLI globally (-g))
+3. Install Angular CLI (website https://cli.angular.io/) by using command: `npm install -g @angular/cli` OR `npm i -g @angular/cli` (it will install Angular CLI globally (-g))
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/2.3.2-angular_cli.png" alt="Angular CLI website" title="Angular CLI website" width="600" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/2.3.2-angular-cli.png" alt="Angular CLI website" title="Angular CLI website" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI website - https://cli.angular.io/</figcaption>
   </figure>
 </p>
 
-4. After installation check version of angular CLI or verify installation by using command by using the command: `ng -v` OR `ng --version` (the command returns versions of Angular CLI, node/npm as well as operating system installed on your local machine), you can also verify angular CLI installation by command: `ng` OR `ng --help`
+4. After installation check version of angular CLI or verify installation by using command by using the command: `ng -v` OR `ng --version` (the command returns versions of Angular CLI, node/npm as well as operating system installed on your local machine), you can also verify angular CLI installation by command: `ng -h` OR `ng --help`
+
+03 Angular CLI Commands and Utilities
+=====================
+
+3.1. Angular CLI Create new project
+---------------------
+3.1. Angular CLI Create new project/App - `ng new`
+---------------------
+1. Create a new app/project with angular CLI by using the syntax: `ng new project/appName` 
+<br/> example: command: `ng new firstAngularCliApp`
+    - Create an Angular application that already works, right out of the box with our best practices!
+    - Creates a new Angular project. By default the project is created under the current directory itself
+<br/><br/> **'ng new' command do following:** <br/><br/>
+    - Creates a new folder with the name `firstAngularCliApp`
+    - All the `npm dependencies` are installed in `node_modules` folder
+    - All the required `configuration and source files` are created
+    - `Unit` and `end-to-end tests` are created
+    - `Karma unit test runner` is configured
+    - `Protractor end-to-end test framework` is configured
+2. Go inside the project/app directory or change directory, command: `cd firstAngularCliApp`
+3. Build, compile, serve, check and run Angular App in default browser by using angular CLI command: `ng serve` OR `ng serve -o` OR `ng serve --open`
+4. To change default port number, syntax: `ng serve --port PORN NUMBER` 
+<br/> example: command: `ng serve --port 4500`
+5. Go to the browser and launch/check Angular App by entering the web address: `localhost:4200` OR `localhost:4500`
+
+Watch/live reload mode
+---------------------
+**Angular CLI application runs in `watch/live reload mode`** which simply means when you make any changes in application files and perform save, browser/app refresh and load the latest code automatically.
+
+Angular CLI commands widely used with Angular app
+---------------------
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng new app-name                           | To create new angular app/project         |
+| ng build                                  | To build and create distributable/shareable version |
+| ng serve                                  | To run/serve angular app                  |
+| ng serve --open OR ng serve -o            | To run/serve angular app in default browser |
+| ng lint                                   | To run lint/syntax checker                |   
+| ng test                                   | To run unit test                          |    
+| ng e2e                                    | To run End-to-End test                    |          
+
+3.2. Angular CLI getting help
+---------------------
+3.2. Angular CLI getting help - `ng help` OR `ng -h`
+---------------------
+To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lists available Angular CLI commands and their short descriptions
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/3.2.1-angular-cli-help.png" alt="Angular CLI Help" title="Angular CLI Help" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI Help</figcaption>
+  </figure>
+</p>
+
+Angular CLI help commands
+---------------------
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng help OR ng -h                          | To get Angular CLI help                   |
+| ng version --help                         | To get command-specific help              |
+<!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
+| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file |  
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/3.2.2-angular-cli-specific-help.png" alt="Angular CLI - Command specific Help" title="Angular CLI - Command specific Help" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI - Command specific Help</figcaption>
+  </figure>
+</p>
