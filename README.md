@@ -87,9 +87,13 @@ Creating Angular application boilerplate manually is tedious, time-consuming, mo
 
 Angular CLI eases and makes Angular app/project development process faster. 
 
+<div class="table-why-cli">
+
 | **without Angular CLI**                   | **with Angular CLI**                      |
 | ------------------------------------------|-------------------------------------------|
 | **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and  | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
+
+</div>
  
 1.3. Benefits Advantages of Angular CLI
 ---------------------
@@ -176,6 +180,9 @@ In this section, we will learn how to set up a local development environment of 
 **Angular CLI application runs in `watch/live reload mode`** which simply means when you make any changes in application files and perform save, browser/app refresh and load the latest code automatically.
 
 ### Table: Angular CLI new command options
+
+<div class="table-new-command">
+
 | **Angular CLI new command option**        | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
 | ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d     | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
@@ -184,9 +191,14 @@ In this section, we will learn how to set up a local development environment of 
 | ng new app-name --inline-style <br/> ng new app-name --inlineStyle <br/> ng new app-name -is <br/> ng new app-name -s          | When true, `includes styles inline in the component .TS file itsleft` (No seperate .css/scss styles files created). By default, an external styles file is created and referenced in the component .TS file. |
 | ng new app-name --inline-template <br/> ng new app-name --inlineTemplate <br/> ng new app-name -it <br/> ng new app-name -t          | When true, `includes template inline in the component .TS itsleft` (No seperate .html template files created). By default, an external template file is created and referenced in the component .TS file. |
 
+</div>
+
 - Reference: https://angular.io/cli/new
 
 ### Table: Angular CLI commands widely used with Angular app
+
+<div class="table-cli">
+
 | **Angular CLI command**                   | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
 | ng new app-name                           | To create new angular app/project         |
@@ -196,6 +208,8 @@ In this section, we will learn how to set up a local development environment of 
 | ng lint                                   | To run lint/syntax checker                |   
 | ng test                                   | To run unit test                          |    
 | ng e2e                                    | To run End-to-End test                    |          
+
+</div>
 
 3.2. Angular CLI getting help
 ---------------------
@@ -211,6 +225,9 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
 </p>
 
 ### Table: Angular CLI help commands
+
+<div class="table-help">
+
 | **Angular CLI command**                   | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
 | ng help OR ng -h                          | To get Angular CLI help                   |
@@ -218,6 +235,8 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
 | ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file |  
 
 <!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
+
+</div>
 
 <p>
   <figure>
@@ -245,10 +264,12 @@ In this section, we will discuss the significance and importance of the Angular 
 - Build the application etc.
 
 ### Table: angular.json settings and their purpose
----------------------
+
+<div class="table-configuration">
+
 | Setting                       | Purpose                                   | 
 |-------------------------------|-------------------------------------------|
-| defaultProject        | Name of the project                       |
+| defaultProject                | Name of the project                       |
 | projects: root/sourceRoot        | The root directory of the application, default is `src` |
 | projects: outputPath            | The output directory for build results, default is `dist` | 
 | projects: assets                | List of application assets that you want to copy when building your project. By default, the `src/assets/` folder and `src/favicon.ico` are copied over | 
@@ -257,5 +278,7 @@ In this section, we will discuss the significance and importance of the Angular 
 | projects: tsConfig              | The `TypeScript` configuration file | 
 | projects: polyfills              | The name of the `polyfills` file. Angular is built on the latest standards of the web platform. Targeting such a wide range of browsers is challenging because not all browsers support all features of modern browsers. This can be compensated by using polyfill scripts that implement missing features in JavaScript |
 | projects: styles                | Global styles to be included in the build, default is `styles.css`. We can also use `less` or `scss`. To change to less or scss/sass, use the `"style"` option when generating a new angular project using the `"ng new"` command |
+
+</div>
 
 - Reference: https://angular.io/guide/workspace-config
