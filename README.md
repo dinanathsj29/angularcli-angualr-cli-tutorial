@@ -59,6 +59,7 @@ Topics included/covered
     - 3.1. [Angular CLI Create new project/App - ng new](#31-angular-cli-create-new-project)
     - 3.2. [Angular CLI getting help - ng help](#32-angular-cli-getting-help)
     - 3.3. [Angular CLI configuration file - angular.json](#33-angular-cli-configuration-file)
+    - 3.4. [Angular CLI project structure](#34-angular-cli-project-structure)
 
 <!--4. [Demo - Angular Application using Angular CLI](#04-components)
 5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
@@ -91,7 +92,8 @@ Angular CLI eases and makes Angular app/project development process faster.
 
 | **without Angular CLI**                   | **with Angular CLI**                      |
 | ------------------------------------------|-------------------------------------------|
-| **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and requirements <img width="250px" /> | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
+| **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and requirements   | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
+| <img width="250px" />                     |  &nbsp;                                    |
 
 </div>
  
@@ -185,15 +187,14 @@ In this section, we will learn how to set up a local development environment of 
 
 | **Angular CLI new command option**        | **Description**                           |
 | ------------------------------------------|-------------------------------------------|
-| ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d <img width="600px" />    | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
+| ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d     | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
 | ng new app-name --skip-install <br/> ng new app-name --skipInstall <br/> ng new app-name -si                             | When true, `does not install dependency packages i.e. node_modules folder` |
 | ng new app-name --skip-test <br/> ng new app-name --skipTest <br/> ng new app-name -st <br/> ng new app-name -S          | `does not generate "spec.ts" test files` for the new project |
 | ng new app-name --inline-style <br/> ng new app-name --inlineStyle <br/> ng new app-name -is <br/> ng new app-name -s          | When true, `includes styles inline in the component .TS file itsleft` (No seperate .css/scss styles files created). By default, an external styles file is created and referenced in the component .TS file. |
 | ng new app-name --inline-template <br/> ng new app-name --inlineTemplate <br/> ng new app-name -it <br/> ng new app-name -t          | When true, `includes template inline in the component .TS itsleft` (No seperate .html template files created). By default, an external template file is created and referenced in the component .TS file. |
+| <img width="600px" />                     |  &nbsp;                                    |
 
 </div>
-
-- Reference: https://angular.io/cli/new
 
 ### Table: Angular CLI commands widely used with Angular app
 
@@ -207,9 +208,12 @@ In this section, we will learn how to set up a local development environment of 
 | ng serve --open OR ng serve -o            | To run/serve angular app in default browser |
 | ng lint                                   | To run lint/syntax checker                |   
 | ng test                                   | To run unit test                          |    
-| ng e2e <img width="250px" />              | To run End-to-End test                    |          
+| ng e2e                                    | To run End-to-End test                    |  
+| <img width="250px" />                     |  &nbsp;                                   |        
 
 </div>
+
+- Reference: https://angular.io/cli/new
 
 3.2. Angular CLI getting help
 ---------------------
@@ -232,7 +236,8 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
 | ------------------------------------------|-------------------------------------------|
 | ng help OR ng -h                          | To get Angular CLI help                   |
 | ng version --help                         | To get command-specific help              |
-| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc <img width="350px" />            | To paste help content text to an external file, to redirect help command output to desired file |  
+| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file | 
+| <img width="350px" />                     |  &nbsp;                                   | 
 
 <!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
 
@@ -269,16 +274,91 @@ In this section, we will discuss the significance and importance of the Angular 
 
 | Setting                       | Purpose                                   | 
 |-------------------------------|-------------------------------------------|
-| defaultProject <img width="550px" />                | Name of the project                       |
+| defaultProject                | Name of the project                       |
 | projects: root/sourceRoot        | The root directory of the application, default is `src` |
 | projects: outputPath            | The output directory for build results, default is `dist` | 
 | projects: assets                | List of application assets that you want to copy when building your project. By default, the `src/assets/` folder and `src/favicon.ico` are copied over | 
 | projects: index                  | The name of the start HTML file which is by default `index.html`  |
 | projects: main                  | The name of the main entry-point file, which is `main.ts` by default | 
 | projects: tsConfig              | The `TypeScript` configuration file | 
-| projects: polyfills              | The name of the `polyfills` file. Angular is built on the latest standards of the web platform. Targeting such a wide range of browsers is challenging because not all browsers support all features of modern browsers. This can be compensated by using polyfill scripts that implement missing features in JavaScript |
+| projects: polyfills              | The name of the `polyfills` file - provides polyfill scripts for browser support. Angular is built on the latest standards of the web platform. Targeting such a wide range of browsers is challenging because not all browsers support all features of modern browsers. This can be compensated by using polyfill scripts that implement missing features in JavaScript |
 | projects: styles                | Global styles to be included in the build, default is `styles.css`. We can also use `less` or `scss`. To change to less or scss/sass, use the `"style"` option when generating a new angular project using the `"ng new"` command |
+| <img width="650px" />                     |  &nbsp;                                   | 
 
 </div>
 
 - Reference: https://angular.io/guide/workspace-config
+
+3.4. Angular CLI project structure
+---------------------
+The following Angular CLI command creates a new working Angular Project skeleton/scaffolding and structure with best practices and standards:
+- `ng new firstAngularCliApp`
+
+The below image shows an Angular project file folder structure in Visual Studio Code editor:
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/3.4.1-angular-cli-project-structure-root.png" alt="Angular CLI - File Folder Project Structure - Root" title="Angular CLI - File Folder Project Structure - Root" width="500" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI - File Folder Project Structure - Root</figcaption>
+  </figure>
+</p>
+
+### Table: Angular File Folder Project Structure and their purpose - root 
+
+<div class="table-project-structure">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| `**Folders:** `                           |                                           |
+| e2e                                       | An `e2e` folder contains source files for a `set of end-to-end tests along with test-specific configuration files` |
+| node_modules                              | The packages specified in `package.json` file are installed into this folder when we `run npm install` command. Also provides `npm packages/dependencies` to the entire workspace/projects |
+| `**Files:** `                             |  |
+| .editorconfig                             | `Configuration for current code editors`. This file let you set certain code style guidelines, example: what `indent_style`, `spaces` or `tabs`, `indent size` etc. We can share this `editorconfig file` with other developers/team members to `maintain consistent coding styles`. Read more about editor configuration please visit http://editorconfig.org |
+| .gitignore                                | Specifies intentionally `untracked files that Git should ignore`. This file is used to determine files and folders you don't want to check-in/track to source control, example: `dist, backup, node_modules folder` |
+| angular.json                              | Angular CLI configuration file. Angular CLI `configuration defaults for all projects - build, serve, and test tools that the CLI uses, such as TSLint, Karma, and Protractor` |
+| package-lock.json                         | Provides version information for all packages installed into node_modules by the npm client  |
+| package.json                              | Contains the packages to build and run our angular application. Custom script can also be added in as per requirements <br/><br/> **It contains two sets of packages:** <br/>1. **dependencies**: The dependencies are essential for running the application, and <br/>2. **devDependencies**: The devDependencies are only required to develop the application <br/><br/>These packages mentioned in `package.json`  are installed into the `node_modules` folder by the `Node Package Manager (npm)`, when `npm install` command is executed.<br/><br/>`"scripts"` property contains the useful `npm commands`, just look we have `"start": "ng serve"` or `"start": "ng serve --open"` |
+| README.md                                 | Introductory documentation (project documentation) for the root Angular app. README.MD (MarkDown) file contains the commonly used `Angular CLI commands to build, run and test app` |
+| tsconfig.json                             | The `TypeScript` configuration settings file. For example `compileOnSave`, `sourceMap` (.map files are used for debugging your application) |
+| tslint.json                               | Configuration file for `linting and syntax checking` (checks our TypeScript code for programmatic and stylistic errors as well as non-adherence to coding standards and conventions)|
+| <img width="600px" />                     | &nbsp;                                    |  
+
+</div>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/3.4.2-angular-cli-project-structure-src.png" alt="Image - Angular CLI - File Folder Project Structure - src folder" title="Image - Angular CLI - File Folder Project Structure - src folder" width="500" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular CLI - File Folder Project Structure - src folder</figcaption>
+  </figure>
+</p>
+
+### Table: Angular File Folder Project Structure and their purpose - src folder
+
+<div class="table-project-structure">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| `**Folders:** `                           |  |
+| src                                       | By default, the `ng new` CLI command creates a new application skeleton in an `src/` folder (`Source files/source code` for the root-level angular application project - `Components, templates, pipes, services, images, styles`, etc that our angular application needs are present)  |
+| app                                       | Contains the component files in which your application logic and data are defined. `It contains main bootstrap/startup/initializer component named 'app component' and module named 'app module'` |
+| assets                                    | Contains the various `assets` of your application like `images and anything else to be copied when you build your application` |
+| environments                              | Contains `build configuration options for particular target environments` i.e. By default there is an unnamed standard development environment and a production ("prod") environment. You can define additional target environment configurations as per requirements like Dev, QA, UAT, PROD, etc. |
+| `**Files:** `                             |  |
+| browserslist                              | Contains various browser list used by `autoprefixer` to adjust CSS support |
+| favicon.ico                               | An `icon (favorite icon)` use for this application in the bookmark bar/browser address bar/title bar  |
+| index.html                                | The main HTML page that is served/shown when someone visits your site/application/project. The CLI automatically adds all JavaScript and CSS files when building your app |
+| karma.conf.js                             | `Karma - the unit test runner configuration file` |
+| main.ts                                   | `The main entry point` for the Angular application, it contains the code to bootstrap the application root module (AppModule) |
+| polyfills.ts                              | The name of the `polyfills` file - provides polyfill scripts for browser support. Angular is built on the latest standards of the web platform. Targeting such a wide range of browsers is challenging because not all browsers support all features of modern browsers. This can be compensated by using polyfill scripts that implement missing features in JavaScript |
+| styles.css/styles.scss/styles.sass        | Contains the `global styles of our application`. <br/>**Note:** Styles that are local and specific to a component are often defined within the component itself for easier maintenance |
+| test.ts                                   | The `main entry point for unit tests` and loads all the .spec and framework files. This file is required by `karma.conf.js` and loads recursively all the .spec and framework files (*You don't typically need to edit this file*) |
+| tsconfig.app.json                         | TypeScript compiler configuration for the Angular app |
+| tsconfig.spec.json                        | TypeScript compiler configuration for the unit tests |
+| app.component. {.ts,.html,.css,.spec.ts}    | The root/main component `(AppComponent)` TypeScript, HTML template, StyleSheet and Spec files |
+| app.module.ts                                | Root application module `(AppModule)` |
+| <img width="200px" />                     | &nbsp;                                   |
+
+</div>
+
+- Reference:  https://angular.io/guide/architecture
+- Reference:  https://angular.io/guide/file-structure
