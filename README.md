@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="_images-angularcli/1-angular-cli-logo-1.png" alt="angular cli logo" title="angular cli" width="200" />
+  <img src="_images-angularcli/1-angular-cli-logo-1.png" alt="Angular CLI logo" title="Angular CLI" width="200" />
 </p>
 
 Angular CLI
@@ -60,8 +60,13 @@ Topics included/covered
     - 3.2. [Angular CLI getting help - ng help](#32-angular-cli-getting-help)
     - 3.3. [Angular CLI configuration file - angular.json](#33-angular-cli-configuration-file)
     - 3.4. [Angular CLI project structure](#34-angular-cli-project-structure)
-
-<!--4. [Demo - Angular Application using Angular CLI](#04-components)
+    - 3.5. [Angular CLI generate component](#35-angular-cli-generate-component)
+    - 3.6. [Angular CLI generate service](#36-angular-cli-generate-service)
+    - 3.7. [Angular CLI generate module](#37-angular-cli-generate-module)
+    - 3.8. [Angular CLI generate directives, pipes and routing guards](#38-angular-cli-generate-directives,-pipes-and-routing-guards)
+    - 3.9. [Angular CLI generate class, interface and enum](#39-angular-cli-generate-class,-interface-and-enum) 
+    
+<!-- 4. [Demo - Angular Application using Angular CLI](#04-components)
 5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
 
 01 Angular CLI Introduction
@@ -69,7 +74,7 @@ Topics included/covered
 
 1.1. What is Angular CLI
 --------------------- 
-- `Angular CLI = Angular Command Line Interface`, its Command Line utility for Angular (website:  https://cli.angular.io/)
+- `Angular CLI = Angular Command Line Interface`, its Command Line utility for Angular (website: https://cli.angular.io/)
   - Angular CLI is Command Line Interface/Tool for creating, serving and managing Angular projects
   - The quickest and easiest way of creating/starting an Angular app is through the `Angular CLI (Command Line Interface)`
   - It allows/helps the developer to build/generate building blocks of Angular application like `Components, Services, Directives, Routing and Navigation, Pipes, Modules`, etc. with best practices, quicker and easier
@@ -93,7 +98,8 @@ Angular CLI eases and makes Angular app/project development process faster.
 | **without Angular CLI**                   | **with Angular CLI**                      |
 | ------------------------------------------|-------------------------------------------|
 | **We have to do the setup manually**: <br/> 1. download zip/executable/library files,  <br/> 2. extract <br/> 3. follow specific installation process add and  <br/> 4. edit framework/library configuration files etc. according to the project and requirements   | Just install/setup Angular CLI globally on the machine, generate/create new project by using Angular CLI commands and get started with app in no time  |
-| <img width="250px" />                     |  &nbsp;                                    |
+
+<!-- | <img width="250px" />                     |  &nbsp;                              | -->
 
 </div>
  
@@ -122,7 +128,7 @@ In this section, we will list/understand the different tools/Softwares/utilities
 
 - `Node`, (website: https://nodejs.org/en) 
 - `NPM`, (Node Package Manager - comes inbuilt with Node)
-- `Angular CLI = Command Line Interface`, Angular CLI (Command Line Interface) for angular (website:  https://cli.angular.io/), 
+- `Angular CLI = Command Line Interface`, Angular CLI (Command Line Interface) for angular (website: https://cli.angular.io/), 
     - it allows the developer to build/generate building blocks of angular application like component, services, routings, modules, etc. with best practices quicker and easier)
 - `Text Editor`
     - Visual Studio Code / Visual Studio Code Insiders (website: https://code.visualstudio.com)
@@ -152,7 +158,7 @@ In this section, we will learn how to set up a local development environment of 
   </figure>
 </p>
 
-4. After installation check version of angular CLI or verify installation by using command by using the command: `ng -v` OR `ng --version` (the command returns versions of Angular CLI, node/npm as well as operating system installed on your local machine), you can also verify angular CLI installation by command: `ng -h` OR `ng --help`
+4. After installation check version of Angular CLI or verify installation by using command by using the command: `ng -v` OR `ng --version` (the command returns versions of Angular CLI, node/npm as well as operating system installed on your local machine), you can also verify Angular CLI installation by command: `ng -h` OR `ng --help`
 
 03 Angular CLI Commands and Utilities
 =====================
@@ -161,7 +167,7 @@ In this section, we will learn how to set up a local development environment of 
 ---------------------
 3.1. Angular CLI Create new project/App - `ng new`
 ---------------------
-1. Create a new app/project with angular CLI by using the syntax: `ng new project/appName` 
+1. Create a new app/project with Angular CLI by using the syntax: `ng new project/appName` 
 <br/> example: command: `ng new firstAngularCliApp`
     - Create an Angular application that already works, right out of the box with our best practices!
     - Creates a new Angular project. By default the project is created under the current directory itself
@@ -173,7 +179,7 @@ In this section, we will learn how to set up a local development environment of 
     - `Karma unit test runner` is configured
     - `Protractor end-to-end test framework` is configured
 2. Go inside the project/app directory or change directory, command: `cd firstAngularCliApp`
-3. Build, compile, serve, check and run Angular App in default browser by using angular CLI command: `ng serve` OR `ng serve -o` OR `ng serve --open`
+3. Build, compile, serve, check and run Angular App in default browser by using Angular CLI command: `ng serve` OR `ng serve -o` OR `ng serve --open`
 4. To change default port number, syntax: `ng serve --port PORN NUMBER` 
 <br/> example: command: `ng serve --port 4500`
 5. Go to the browser and launch/check Angular App by entering the web address: `localhost:4200` OR `localhost:4500`
@@ -189,10 +195,11 @@ In this section, we will learn how to set up a local development environment of 
 | ------------------------------------------|-------------------------------------------|
 | ng new app-name --dry-run <br/> ng new app-name --dryRun <br/> ng new app-name -d     | Run through without making any changes, `--dry-run` flag shows/lists all files/folders that would have been created/generated when using/running `ng new` **( just a mock/dry run of `ng new` command )**        |
 | ng new app-name --skip-install <br/> ng new app-name --skipInstall <br/> ng new app-name -si                             | When true, `does not install dependency packages i.e. node_modules folder` |
-| ng new app-name --skip-test <br/> ng new app-name --skipTest <br/> ng new app-name -st <br/> ng new app-name -S          | `does not generate "spec.ts" test files` for the new project |
+| ng new app-name --skip-tests <br/> ng new app-name --skipTests <br/> ng new app-name -st <br/> ng new app-name -S          | `does not generate "spec.ts" test files` for the new project |
 | ng new app-name --inline-style <br/> ng new app-name --inlineStyle <br/> ng new app-name -is <br/> ng new app-name -s          | When true, `includes styles inline in the component .TS file itsleft` (No seperate .css/scss styles files created). By default, an external styles file is created and referenced in the component .TS file. |
 | ng new app-name --inline-template <br/> ng new app-name --inlineTemplate <br/> ng new app-name -it <br/> ng new app-name -t          | When true, `includes template inline in the component .TS itsleft` (No seperate .html template files created). By default, an external template file is created and referenced in the component .TS file. |
-| <img width="600px" />                     |  &nbsp;                                    |
+
+<!-- | <img width="600px" />                     |  &nbsp;                               | -->
 
 </div>
 
@@ -236,8 +243,9 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
 | ------------------------------------------|-------------------------------------------|
 | ng help OR ng -h                          | To get Angular CLI help                   |
 | ng version --help                         | To get command-specific help              |
-| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file | 
-| <img width="350px" />                     |  &nbsp;                                   | 
+| ng --help > fileName <br/> ng --help > help.txt OR ng --help > readme.doc             | To paste help content text to an external file, to redirect help command output to desired file       | 
+
+<!-- | <img width="350px" />                     |  &nbsp;                              | -->
 
 <!--| `ng --help | clip`                    | To copy help text/help content to the clipboard and then a user can paste to any desired software/application `NOT SUPPORTED`   | -->
 
@@ -283,7 +291,8 @@ In this section, we will discuss the significance and importance of the Angular 
 | projects: tsConfig              | The `TypeScript` configuration file | 
 | projects: polyfills              | The name of the `polyfills` file - provides polyfill scripts for browser support. Angular is built on the latest standards of the web platform. Targeting such a wide range of browsers is challenging because not all browsers support all features of modern browsers. This can be compensated by using polyfill scripts that implement missing features in JavaScript |
 | projects: styles                | Global styles to be included in the build, default is `styles.css`. We can also use `less` or `scss`. To change to less or scss/sass, use the `"style"` option when generating a new angular project using the `"ng new"` command |
-| <img width="650px" />                     |  &nbsp;                                   | 
+
+<!-- | <img width="650px" />                     |  &nbsp;                   | -->
 
 </div>
 
@@ -321,7 +330,8 @@ The below image shows an Angular project file folder structure in Visual Studio 
 | README.md                                 | Introductory documentation (project documentation) for the root Angular app. README.MD (MarkDown) file contains the commonly used `Angular CLI commands to build, run and test app` |
 | tsconfig.json                             | The `TypeScript` configuration settings file. For example `compileOnSave`, `sourceMap` (.map files are used for debugging your application) |
 | tslint.json                               | Configuration file for `linting and syntax checking` (checks our TypeScript code for programmatic and stylistic errors as well as non-adherence to coding standards and conventions)|
-| <img width="600px" />                     | &nbsp;                                    |  
+
+<!-- | <img width="600px" />                     | &nbsp;                                    | --> 
 
 </div>
 
@@ -356,9 +366,110 @@ The below image shows an Angular project file folder structure in Visual Studio 
 | tsconfig.spec.json                        | TypeScript compiler configuration for the unit tests |
 | app.component. {.ts,.html,.css,.spec.ts}    | The root/main component `(AppComponent)` TypeScript, HTML template, StyleSheet and Spec files |
 | app.module.ts                                | Root application module `(AppModule)` |
-| <img width="200px" />                     | &nbsp;                                   |
+
+<!-- | <img width="200px" />                     | &nbsp;                                   | -->
 
 </div>
 
-- Reference:  https://angular.io/guide/architecture
-- Reference:  https://angular.io/guide/file-structure
+- Reference: https://angular.io/guide/architecture
+- Reference: https://angular.io/guide/file-structure
+
+3.5. Angular CLI generate component
+---------------------
+An angular application must have the `npm packages installed` to be able to generate components using Angular CLI. Example: ng generate component COMPONENT-NAME OR ng g c COMPONENT-NAME
+### Table: Angular CLI generate commands
+
+<div class="table-generate">
+
+| **Angular CLI command**                        | **Description**   |
+| -----------------------------------------------|-------------------------------------------|
+| ng generate component COMPONENT-NAME OR <br/> ng g c COMPONENT-NAME                   | Creates a new generic component definition |
+| ng generate component PATH/COMPONENT-NAME OR <br/> ng g c PATH/COMPONENT-NAME         | Place the generated component folder in a specific/different folder |
+| ng generate component COMPONENT-NAME --flat OR <br/> ng g c PATH/COMPONENT-NAME --flat        | Generating/create a new component without a folder, To generate component on root / without folder name / not inside component folder name|
+| ng g c COMPONENT-NAME --dryRun  | Run through without making any changes, we can mock/dry run app, components or any other Angular CLI utilities |
+| ng g c COMPONENT-NAME --skipTests  | `does not generate "spec.ts" test files` for the new project |
+
+<!-- | <img width="450px" />                     |  &nbsp;                                   | -->
+
+- Reference: https://angular.io/cli/generate 
+
+3.6. Angular CLI generate service
+---------------------
+In Angular application services can be created by using Angular CLI command: `ng generate service consumerData` OR `ng g s consumerData`
+than <br/>
+`register/import service in app.module.ts` at top, also in `providers array/root injector`.
+
+### Table: Angular CLI generate service commands
+
+<div class="table-generate-service">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng generate service consumerData OR <br/> ng g s consumerData                         | To create a new service |
+
+<!-- | <img width="300px" />                     |  &nbsp;                                   | -->
+
+</div>
+
+3.7. Angular CLI generate module
+---------------------
+In real-time project an `Angular project may contain more than one module` like loginModule, userModule, adminModule, superAdminModule, reportModule, studentModule, testModule, etc. `AppModule` is root module in the application. 
+
+Create a new module by using Angular CLI command: `ng generate module admin` OR `ng g m admin`
+than <br/>
+register/import newly created module in `app.module.ts` at the top, also in imports array.
+
+### Table: Angular CLI generate module commands
+
+<div class="table-generate-module">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng generate module admin OR <br/> ng g m admin   | To create a new module               |
+| ng generate module admin `-m = app.module` OR <br/> ng g m admin `-m = app.module`    | To import/register new `admin module into the root module (AppModule) / under specific module` (If multiple module present in app) |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   | -->
+
+</div>
+
+3.8. Angular CLI generate directives, pipes and routing guards
+---------------------
+**Note:** Generating directives, pipes, routing guards and other angular features are very similar to generating component and services. 
+
+### Table: Angular CLI generate directives, pipes and routing guards commands
+
+<div class="table-generate-directives">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng generate directives DIRECTIVE-NAME OR <br/> ng g d DIRECTIVE-NAME | To create a new directive    |
+| ng generate directives PATH/DIRECTIVE-NAME OR <br/> ng g d PATH/DIRECTIVE-NAME | To create a new directive under a specific/different folder |
+| ng directives DIRECTIVE-NAME `-m = app.module` OR <br/> ng g m directives DIRECTIVE-NAME `-m = app.module`    | To import/register new `directive into the root module (AppModule) / under specific module` (If multiple module present in app) |
+| ng generate pipes PIPE-NAME OR <br/> ng g p PIPE-NAME | To create a new pipe/filter    |
+| ng generate guard GUARD-NAME OR <br/> ng g g GUARD-NAME | To create a new Guard    |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   | -->
+
+</div>
+
+**Note:** IF multiple modules are present in Angular app than generate directives, pipes or component with following commands:
+1. ng generate directives DIRECTIVE-NAME --skip-import (`deprecated`)
+2. ng generate directives DIRECTIVE-NAME -module = app.module
+
+3.9. Angular CLI generate class, interface, and enum
+---------------------
+**Note:** We can use the Angular CLI to generate TypeScript features as well. Generating class, interface, enum, and other angular features are very similar to generating component and services. 
+
+### Table: Angular CLI generate class, interface and enum commands
+
+<div class="table-generate-class">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng generate class CLASS-NAME OR <br/> ng g cl CLASS-NAME   | To create a class        |
+| ng generate interface INTERFACE-NAME OR <br/> ng g I INTERFACE-NAME | To create an interface   |
+| ng generate enum ENUM-NAME OR <br/> ng g e ENUM-NAME | To create an enum               |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
