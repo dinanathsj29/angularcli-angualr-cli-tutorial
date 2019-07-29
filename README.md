@@ -63,7 +63,7 @@ Topics included/covered
     - 3.5. [Angular CLI generate component](#35-angular-cli-generate-component)
     - 3.6. [Angular CLI generate service](#36-angular-cli-generate-service)
     - 3.7. [Angular CLI generate module](#37-angular-cli-generate-module)
-    - 3.8. [Angular CLI generate directives, pipes and routing guards](#38-angular-cli-generate-directives,-pipes-and-routing-guards)
+    - 3.8. [Angular CLI generate directives, pipes and routing guards](#38-angular-cli-generate-directives-pipes-and-routing-guards)
     - 3.9. [Angular CLI generate class, interface and enum](#39-angular-cli-generate-class,-interface-and-enum) 
     
 <!-- 4. [Demo - Angular Application using Angular CLI](#04-components)
