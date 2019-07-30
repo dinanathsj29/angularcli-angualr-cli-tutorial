@@ -527,3 +527,14 @@ There are many rules related to quotes, spaces, semicolon, keywords, etc. mentio
 </div>
 
 - Reference: https://angular.io/cli/lint
+
+TSLint in Visual Studio Code
+---------------------
+Let's discuss, How to display and fix linting errors in Visual Studio Code / Visual Studio Code Insiders. By default Visual Studio Code (VS Code) does not show/display any linting errors with `red underline`. 
+
+To check syntax error/lint error by default (as soon as we type code) in Visual Studio Code / Visual Studio Code Insiders we must need to install `TSLint` extention from menu `VIEW->Extension Menu (SHIFT+COMMAND+X)` or at left side panel -> click on the last extention icon -> and search for `TSLint` extention -> Reload VS Code to activate newly installed TSLint extention. 
+
+If any `red underlines` in code (if any linting errors exist in code) simply follow below-mentioned approaches to fix:
+1. Manually fix the linting error - Hover on red underline code -> Read error -> type and fix it manually
+2. Click on the red underline code -> Click on  Yellow Light Bulb appear at left-hand side code -> finally choose the first option `Fix lint error (Fix Missing/Fix...)`
+
