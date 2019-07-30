@@ -64,8 +64,9 @@ Topics included/covered
     - 3.6. [Angular CLI generate service](#36-angular-cli-generate-service)
     - 3.7. [Angular CLI generate module](#37-angular-cli-generate-module)
     - 3.8. [Angular CLI generate directives, pipes and routing guards](#38-angular-cli-generate-directives-pipes-and-routing-guards)
-    - 3.9. [Angular CLI generate class, interface and enum](#39-angular-cli-generate-class-interface-and-enum) 
-    
+    - 3.9. [Angular CLI generate class, interface and enum](#39-angular-cli-generate-class-interface-and-enum)
+    - 3.10. [Linting TypeScript](#310-linting-typescript)
+
 <!-- 4. [Demo - Angular Application using Angular CLI](#04-components)
 5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
 
@@ -444,7 +445,7 @@ register/import newly created module in `app.module.ts` at the top, also in impo
 | ------------------------------------------|-------------------------------------------|
 | ng generate directives DIRECTIVE-NAME OR <br/> ng g d DIRECTIVE-NAME | To create a new directive    |
 | ng generate directives PATH/DIRECTIVE-NAME OR <br/> ng g d PATH/DIRECTIVE-NAME | To create a new directive under a specific/different folder |
-| ng directives DIRECTIVE-NAME `-m = app.module` OR <br/> ng g m directives DIRECTIVE-NAME `-m = app.module`    | To import/register new `directive into the root module (AppModule) / under specific module` (If multiple module present in app) |
+| ng directives DIRECTIVE-NAME `-m = app.module` OR <br/> ng g m directives DIRECTIVE-NAME `-m = app.module`    | To import/register new `directive into the root module (AppModule) / under specific module` (If multiple module present in-app) |
 | ng generate pipes PIPE-NAME OR <br/> ng g p PIPE-NAME | To create a new pipe/filter    |
 | ng generate guard GUARD-NAME OR <br/> ng g g GUARD-NAME | To create a new Guard    |
 
@@ -473,3 +474,56 @@ register/import newly created module in `app.module.ts` at the top, also in impo
 <!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
 
 </div>
+
+3.10. Linting TypeScript
+---------------------
+`ng lint` command lint the application code using `tslint` to ensure best coding practices of Angular.
+
+Angular and various Languages, Frameworks uses linters to check:
+- Programming errors
+- Stylistic/formatting errors
+- Syntax error
+- Non-coding standards/conventions
+
+As far as Angular CLI project/app is concern `tslint.json` is the configuration file for linting. This file contains all the default rules for linting our code. 
+
+### Table: Angular CLI ng lint commands
+
+<div class="table-ng-lint">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng lint                                   | Runs linting tools on Angular app code    |
+| ng lint --help OR <br/> ng lint -h        | To get help on ng lint command            |
+| ng lint --type-check OR <br/> ng lint --typeCheck  | If `no-use-before-declare` rule is true or enabled we need to use `--type-check option`, it controls the type check for linting|
+| ng lint --fix                             | To fix common linting rules automatically by Angular CLI `(automatic fix)` |
+| | |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+Angular tslint rules
+---------------------
+There are many rules related to quotes, spaces, semicolon, keywords, etc. mentioned in `tslint.json` file, we can modify rules or follow them as per requirements. 
+
+### Table: Angular CLI tslint.json lint properties/rules
+
+<div class="table-tslint">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| no-var-keyword                            | If true, `var` keyword is not allowed to define any variables, instead, use `let` or `cont` keyword while defining any new variable in application    |
+| no-use-before-declare                     | If true, not allowed to use any variable before the declaration. The simple step is - `1. First Define variables 2. Then only Use variables`     |
+| quotemark                                 | The `quotemark` rule specifies whether you want `single or double quotes` |
+| no-trailing-whitespace                    | This rule `disallows trailing whitespace at the end of a line` |
+| semicolon                                 | Rule specifies that a `line should be terminated with a semicolon` |
+| comment-format                            | It specifies that all `single-line comments must begin with space` |
+| component-class-suffix                    | This rule enforces that a `component class should end with the suffix keyword Component` |
+| use-life-cycle-interface                  | It denotes we must add the `implements keyword for every lifecycle hook used (export class AppComponent implements OnInit...) `|
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+- Reference: https://angular.io/cli/lint
