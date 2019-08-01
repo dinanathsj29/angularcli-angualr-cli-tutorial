@@ -66,6 +66,12 @@ Topics included/covered
     - 3.8. [Angular CLI generate directives, pipes and routing guards](#38-angular-cli-generate-directives-pipes-and-routing-guards)
     - 3.9. [Angular CLI generate class, interface and enum](#39-angular-cli-generate-class-interface-and-enum)
     - 3.10. [Linting TypeScript](#310-linting-typescript)
+    - 3.11. [Angular Routing](#311-angular-routing)
+4. [Running angular app locally](#04-running-angular-app-locally)
+    - 4.1. [Angular CLI ng serve command options](#41-angular-cli-ng-serve-command-options)
+5. [Compile angular app](#05-compile-angular-app)
+    - 5.1. [Ng Serve VS Ng Build](#51-ng-serve-vs-ng-build)
+    <!-- 5.2. [dev build VS prod build](#52-dev-build-vs-prod-build) -->
 
 <!-- 4. [Demo - Angular Application using Angular CLI](#04-components)
 5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
@@ -283,7 +289,7 @@ In this section, we will discuss the significance and importance of the Angular 
 
 | Setting                       | Purpose                                   | 
 |-------------------------------|-------------------------------------------|
-| defaultProject                | Name of the project                       |
+| default project                | Name of the project                       |
 | projects: root/sourceRoot        | The root directory of the application, default is `src` |
 | projects: outputPath            | The output directory for build results, default is `dist` | 
 | projects: assets                | List of application assets that you want to copy when building your project. By default, the `src/assets/` folder and `src/favicon.ico` are copied over | 
@@ -398,7 +404,7 @@ An angular application must have the `npm packages installed` to be able to gene
 ---------------------
 In Angular application services can be created by using Angular CLI command: `ng generate service consumerData` OR `ng g s consumerData`
 than <br/>
-`register/import service in app.module.ts` at top, also in `providers array/root injector`.
+`register/import service in app.module.ts` at the top, also in `providers array/root injector`.
 
 ### Table: Angular CLI generate service commands
 
@@ -538,3 +544,214 @@ If any `red underlines` in code (if any linting errors exist in code) simply fol
 1. Manually fix the linting error - Hover on red underline code -> Read error -> type and fix it manually
 2. Click on the red underline code -> Click on  Yellow Light Bulb appear at left-hand side code -> finally choose the first option `Fix lint error (Fix Missing/Fix...)`
 
+3.11. Angular Routing
+---------------------
+- The `Angular Router enables navigation from one view (component)` to the other/next views (component) as users perform tasks
+- Routing simply means navigating between the different view (component)
+- Command to create an Angular app with separate routing module: `ng new routing-demo-app --routing`
+- Creating routing manually in Angular application is little time consuming and also involves many small steps:
+  1. Generate a new Angular project/app
+  2. Generate required components if any
+  3. Configure the Routes
+  4. Add buttons and use a directive to navigate
+
+#### To learn Angular Routing from basics to advanced level, please refer to angular routing and navigation tutorial: [https://github.com/dinanathsj29/angular-routing-and-navigation](https://github.com/dinanathsj29/angular-routing-and-navigation)
+
+04 Running angular app locally
+=====================
+04 Running angular app locally - `ng serve`
+=====================
+In this section we will discuss and learn:
+- How to compile and run an angular application locally on your machine - `ng serve`
+- Behind the scene and under the hood processes - when compile and run an Angular application
+- What is bundling? 
+- Importance of Bundling and app performance
+
+Angular CLI command to serve and run an angular application in default browser: `ng serve --open` 
+
+> **Note:** Behind the scene and under the hood `Angular CLI runs Webpack to build and bundle all JavaScript and CSS code`
+
+### Bundling (concat and minify):
+- A real-time or real-world Angular applications are made up of many/various small files `(.html, .ts, .css/.scss/.sass, .spec.ts etc.)`
+- `Web browsers have a limit` on how many scripts or CSS files can download and run simultaneously
+- Due to this browser limitations, an `applications can suffer performance perspective` and face performance issues, as many JS or CSS files to download, load and run
+- `Bundling (concat and minify)` can solve the downloading problem by combining small files into fewer bundles
+
+### Table: Angular CLI ng serve different bundles created
+
+<div class="table-bundle">
+
+| **Angular CLI Bundle File **        | **Description**                           |
+| ------------------------------------|-------------------------------------------|
+| main.js                             | All application code that the developer writes  |
+| polyfills.js                        | All polyfill scripts for browser support, Browser Polyfills  |
+| runtime.js (inline.bundle.js)       | WebPack runtime & settings, required for Webpack to perform all its task  |
+| styles.js                           | All Styles (CSS style sheet) used in the application  |
+| vendor.js                           | All Angular and 3rd party vendor utility files |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+### Angular CLI `ng serve` command build, serve and creates different bundles as mentioned above. One can view bundle info and verify those all bundles while compiling/serving angular app by various ways as given below:
+
+1. `Terminal / Command Window/Panel - ng serve --open --port 5000` 
+2. `Google Chrome Browser -> View menu -> Developer -> Developer Tool -> Elements Tab` (at the bottom of body tag)
+3. `Google Chrome Browser -> View menu -> Developer -> Developer Tool -> Soures Tab`
+4. `Google Chrome Browser -> View menu -> Developer -> Developer Tool -> Network Tab - All` (also get size information of bundle)
+
+<hr/>
+
+> **Syntax & Example**: 1. `Terminal / Command Window/Panel - ng serve --open --port 5000`
+
+<pre>
+  ng serve --open --port 5000
+  ** Angular Live Development Server is listening on localhost:5000, open your browser on http://localhost:5000/ **
+                                                                                            
+  Date: 2019-07-31T14:58:02.292Z
+  Hash: e4a01629e300d6470f8a
+  Time: 7233ms
+  chunk {main} <strong><u>main.js</u></strong>, main.js.map (main) 145 kB [initial] [rendered]
+  chunk {polyfills} <strong><u>polyfills.js</u></strong>, polyfills.js.map (polyfills) 227 kB [initial] [rendered]
+  chunk {runtime} <strong><u>runtime.js</u></strong>, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+  chunk {styles} <strong><u>styles.js</u></strong>, styles.js.map (styles) 16.6 kB [initial] [rendered]
+  chunk {vendor} <strong><u>vendor.js</u></strong>, vendor.js.map (vendor) 3.62 MB [initial] [rendered]
+  ℹ ｢wdm｣: Compiled successfully.
+</pre>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/4.1.1-ng-serve-terminal-output.png" alt="ng serve terminal output" title="ng serve terminal output" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - ng serve terminal output</figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+> **Syntax & Example**: 2. `Google Chrome Browser -> View menu -> Developer -> Developer Tool -> Elements Tab`
+
+<pre>
+  &lt;html&gt;
+    
+    &lt;head&gt; &lt;/head&gt;
+
+    &lt;body&gt;
+
+      &lt;app-root&gt; &lt;/app-root&gt;
+
+      &lt;script type="text/javascript" src=<strong><u>"runtime.js"</strong></u>&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" src=<strong><u>"polyfills.js"</strong></u>&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" src=<strong><u>"styles.js"</strong></u>&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" src=<strong><u>"vendor.js"</strong></u>&gt;&lt;/script&gt;
+      &lt;script type="text/javascript" src=<strong><u>"main.js"</strong></u>&gt;&lt;/script&gt;
+
+    &lt;/body&gt;
+
+  &lt;/html&gt;
+</pre>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/4.1.2-ng-serve-browser-elements-tab.png" alt="ng serve browser elements tab output" title="ng serve browser elements tab output" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - ng serve browser elements tab output</figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+> **Syntax & Example**: 3. `Google Chrome Browser -> View menu -> Developer -> Developer Tool -> Soures Tab`
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/4.1.3-ng-serve-browser-sources-tab.png" alt="ng serve browser sources tab output" title="ng serve browser sources tab output" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - ng serve browser sources tab output</figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+> **Syntax & Example**: 4. We can also check the different bundles loaded in Angular app from `Google Chrome Browser -> View menu -> Developer -> Developer Tool -> Network Tab - All`
+
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="./_images-angularcli/4.1.4-ng-serve-browser-network-tab.png" alt="ng serve browser network tab output" title="ng serve browser network tab output" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - ng serve browser network tab output</figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+### Different techniques for Application code optimization and improve performance:
+- Bundling (concatenating)
+- AOT (Ahead of Time compilation)
+- Minification (compress)
+- Uglification (Remove unwanted white spaces and lines, breaks)
+- TreeShaking (Delete/eliminate unwanted code/lines)
+- Use of CDN links (Content Distribution Network, Content Delivery Network)
+- Use of Image Sprites (Collection of images in one image, One large image made up of small images)
+- Optimize Images (compress images size)
+- Use a Minimalistic Framework (lightweight Framework)
+
+4.1. Angular CLI ng serve command options
+---------------------
+We know that Angular CLI command - `ng serve` is used to build, serve and run an angular application. To see and get the list of all options that we can use with `ng serve` command, one can use  (`--help`) option i.e. try complete command as: `ng serve --help`
+ 
+### Table: Angular CLI ng serve commands
+
+<div class="table-serve">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| ng serve --help OR <br/> ng serve -h      | To get the help of ng serve command           |
+| ng serve --port OR <br/> ng serve -p      | To change the default port on which angular application is running i.e. 4200           |
+| ng serve --open OR <br/> ng serve -o      | To open the served angular application/URL in default browser |
+| ng serve --watch OR <br/> ng serve -w     | If true, Run the application build when any files change (keep having eye and keep watching any changes occurs)|
+| ng serve ---live-reload OR <br/> ng serve -lr   | If true, Reload the application/page on any files change (automatically reload and refresh application in a browser if any changes taken place)|
+| ng serve --extract-CSS OR <br/> ng serve -ec   | To Extract CSS from global styles into CSS files instead of js ones `(instead of styles.js, bundle all CSS into styles.css)` |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+> **Note**: To cancel watch / live reload mode use command: `ng serve --port 4500 --live-reload=false --watch=false` OR <br/> 
+`ng serve --port 4500 --live-reload false --watch false` OR <br/> 
+`ng serve -p 4500 -lr false -w false`
+
+- Reference: https://angular.io/cli/serve
+
+05 Compile angular app
+=====================
+05 Compile angular app - `ng build`
+=====================
+In this section we will discuss and learn:
+- Compiling angular applications
+- Creating/Producing Development and Production build 
+- Differences between ng serve and ng build command
+- Differences between Development and Production build 
+
+### ng build
+- Angular CLI command `ng build` must be executed from within a workspace directory to compile and create deployable build into an output directory named `dist (distribution)`
+- By default the `ng build` OR `ng build --dev` command creates/does a `development build`, not a `production build`. The development build is typically used for testing purpose. Also With a development build, it is easier to debug the application as it contains source map files
+
+> **Note:** As per the settings mentioned in file `angular.json` (.angular-cli.json), with property `"outputPath": "dist"` ("outDir": "dist"), `ng build` commands output directory is named `dist (distribution)`
+
+- Reference: https://angular.io/cli/build
+
+5.1. Ng serve VS Ng Build
+---------------------
+
+### Table: Difference between ng serve and ng build (ng serve VS ng build)
+
+<div class="table-serve-build">
+
+| **ng serve**                        | **ng build**                           |
+| ------------------------------------|-------------------------------------------|
+| ng serve - Compiles and serves the application `from memory`         | ng build - Build and Compiles the application to the `"dist" (distribution)` folder  |
+| ng serve command does not write the build files to the disk  | ng build command creates and compiles all files into the `"dist" (distribution)` folder  | 
+| ng serve command typically used to run the application on local development machine for viewing/testing purpose | ng build command typically used to create compiled version and deploy the application dist copy on another server |
+| ng serve command cannot be used for deploying the build to another server (Ex. Testing, Staging or Production server) | ng serve command used for deploying the build to another server (Ex. Testing, Staging or Production server)|
+ 
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
