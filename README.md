@@ -47,15 +47,15 @@ After completing/attending this Course/Tutorial, participants should be able to:
 
 Topics included/covered
 ===================== 
-1. [Angular CLI Introduction](#01-angular-cli-introduction)
+01. [Angular CLI Introduction](#01-angular-cli-introduction)
     - 1.1. [What is Angular CLI](#11-what-is-angular-cli)
     - 1.2. [Why use Angular CLI](#12-why-use-angular-cli)
     - 1.3. [Benefits Advantages of Angular CLI](#13-benefits-advantages-of-angular-cli)
-2. [Getting Started with Angular CLI](#02-Getting-Started-with-Angular-CLI)
+02. [Getting Started with Angular CLI](#02-Getting-Started-with-Angular-CLI)
     - 2.1. [Pre-requisites](#21-pre-requisites)
     - 2.2. [Tools required to install Angular CLI](#22-tools-required-to-install-angular-cli)
     - 2.3. [Steps to Setup the Angular CLI development environment](#23-steps-to-setup-the-angular-cli-development-environment)
-3. [Angular CLI Commands and Utilities](#03-angular-cli-commands-and-utilities)
+03. [Angular CLI Commands and Utilities](#03-angular-cli-commands-and-utilities)
     - 3.1. [Angular CLI Create new project/App - ng new](#31-angular-cli-create-new-project)
     - 3.2. [Angular CLI getting help - ng help](#32-angular-cli-getting-help)
     - 3.3. [Angular CLI configuration file - angular.json](#33-angular-cli-configuration-file)
@@ -67,14 +67,16 @@ Topics included/covered
     - 3.9. [Angular CLI generate class, interface and enum](#39-angular-cli-generate-class-interface-and-enum)
     - 3.10. [Linting TypeScript](#310-linting-typescript)
     - 3.11. [Angular Routing](#311-angular-routing)
-4. [Running angular app locally](#04-running-angular-app-locally)
+04. [Running angular app locally](#04-running-angular-app-locally)
     - 4.1. [Angular CLI ng serve command options](#41-angular-cli-ng-serve-command-options)
-5. [Compile angular app](#05-compile-angular-app)
+05. [Compile angular app](#05-compile-angular-app)
     - 5.1. [Ng Serve VS Ng Build](#51-ng-serve-vs-ng-build)
-    <!-- 5.2. [dev build VS prod build](#52-dev-build-vs-prod-build) -->
+    - 5.2. [Dev build VS Prod Production build](#52-dev-build-vs-prod-build)
+    - 5.3. [Angular AOT vs JIT](#53-angular-aot-vs-jit)
+06. [Angular CLI Command List](#06-angular-cli-command-list)
+07. [Angular CLI Resources](#07-angular-cli-resources)
 
-<!-- 4. [Demo - Angular Application using Angular CLI](#04-components)
-5. [Angular CLI Command List](#04-Angular-CLI-Command-List) -->
+<!-- 4. [Demo - Angular Application using Angular CLI](#04-components) -->
 
 01 Angular CLI Introduction
 =====================
@@ -227,7 +229,7 @@ In this section, we will learn how to set up a local development environment of 
 
 </div>
 
-- Reference: https://angular.io/cli/new
+> **Reference:** https://angular.io/cli/new
 
 3.2. Angular CLI getting help
 ---------------------
@@ -265,7 +267,7 @@ To get the help of Angular CLI commands use `ng help` OR `ng -h` command, it lis
   </figure>
 </p>
 
-- Reference: https://angular.io/cli/help
+> **Reference:** https://angular.io/cli/help
 
 3.3. Angular CLI configuration file
 ---------------------
@@ -303,7 +305,7 @@ In this section, we will discuss the significance and importance of the Angular 
 
 </div>
 
-- Reference: https://angular.io/guide/workspace-config
+> **Reference:** https://angular.io/guide/workspace-config
 
 3.4. Angular CLI project structure
 ---------------------
@@ -378,8 +380,8 @@ The below image shows an Angular project file folder structure in Visual Studio 
 
 </div>
 
-- Reference: https://angular.io/guide/architecture
-- Reference: https://angular.io/guide/file-structure
+> **Reference:** https://angular.io/guide/architecture
+> **Reference:** https://angular.io/guide/file-structure
 
 3.5. Angular CLI generate component
 ---------------------
@@ -398,7 +400,7 @@ An angular application must have the `npm packages installed` to be able to gene
 
 <!-- | <img width="450px" />                     |  &nbsp;                                   | -->
 
-- Reference: https://angular.io/cli/generate 
+> **Reference:** https://angular.io/cli/generate 
 
 3.6. Angular CLI generate service
 ---------------------
@@ -532,7 +534,7 @@ There are many rules related to quotes, spaces, semicolon, keywords, etc. mentio
 
 </div>
 
-- Reference: https://angular.io/cli/lint
+> **Reference:** https://angular.io/cli/lint
 
 TSLint in Visual Studio Code
 ---------------------
@@ -685,8 +687,8 @@ Angular CLI command to serve and run an angular application in default browser: 
 ### Different techniques for Application code optimization and improve performance:
 - Bundling (concatenating)
 - AOT (Ahead of Time compilation)
-- Minification (compress)
-- Uglification (Remove unwanted white spaces and lines, breaks)
+- Minification (compress the code by removing unwanted white spaces and lines, breaks)
+- Uglification (compress the code by transforming the code into an unreadable form by changing variable names, function names, etc,)
 - TreeShaking (Delete/eliminate unwanted code/lines)
 - Use of CDN links (Content Distribution Network, Content Delivery Network)
 - Use of Image Sprites (Collection of images in one image, One large image made up of small images)
@@ -718,7 +720,7 @@ We know that Angular CLI command - `ng serve` is used to build, serve and run an
 `ng serve --port 4500 --live-reload false --watch false` OR <br/> 
 `ng serve -p 4500 -lr false -w false`
 
-- Reference: https://angular.io/cli/serve
+> **Reference:** https://angular.io/cli/serve
 
 05 Compile angular app
 =====================
@@ -732,11 +734,11 @@ In this section we will discuss and learn:
 
 ### ng build
 - Angular CLI command `ng build` must be executed from within a workspace directory to compile and create deployable build into an output directory named `dist (distribution)`
-- By default the `ng build` OR `ng build --dev` command creates/does a `development build`, not a `production build`. The development build is typically used for testing purpose. Also With a development build, it is easier to debug the application as it contains source map files
+- By default, the `ng build` command creates/does a `development build`, not a `production build` (we can use `ng build` OR `ng build --dev` command). The development build is typically used for testing purpose. Also With a development build, it is easier to debug the application as it contains source map files
 
 > **Note:** As per the settings mentioned in file `angular.json` (.angular-cli.json), with property `"outputPath": "dist"` ("outDir": "dist"), `ng build` commands output directory is named `dist (distribution)`
 
-- Reference: https://angular.io/cli/build
+> **Reference:** https://angular.io/cli/build
 
 5.1. Ng serve VS Ng Build
 ---------------------
@@ -750,8 +752,152 @@ In this section we will discuss and learn:
 | ng serve - Compiles and serves the application `from memory`         | ng build - Build and Compiles the application to the `"dist" (distribution)` folder  |
 | ng serve command does not write the build files to the disk  | ng build command creates and compiles all files into the `"dist" (distribution)` folder  | 
 | ng serve command typically used to run the application on local development machine for viewing/testing purpose | ng build command typically used to create compiled version and deploy the application dist copy on another server |
-| ng serve command cannot be used for deploying the build to another server (Ex. Testing, Staging or Production server) | ng serve command used for deploying the build to another server (Ex. Testing, Staging or Production server)|
+| ng serve command cannot be used for deploying the build to another server (Testing, Staging or Production server) | ng serve command used for deploying the build to another server (Testing, Staging or Production server)|
  
 <!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
 
 </div>
+
+5.2. Dev build VS Prod build
+---------------------
+
+### Table: Difference between dev build and prod build (dev build VS prod build)
+
+<div class="table-dev-prod-build">
+
+| **Feature Attribute Quality** | **Dev / Local / Normal build**      | **Production / Prod build**    |
+| ------------------------------| ------------------------------------|--------------------------------|
+| **Command**                   | `ng build` OR `ng build --dev` command creates a Dev / Local / Normal build                           | `ng build --prod` command creates a Prod / Production build          |
+| **Creation**                  |  By default the `ng build` command creates/does a development build, specifically we can also use `ng build --dev` command    | We have to use specifically `ng build --prod` command to create a Prod / Production build          |
+| **Purpose**                   | The development build is typically used for `testing purpose`        | The Prod / Production build is created and used for `final deployment purpose`  |
+| **Debug**                     | `Easier to debug` as it contains source maps     | `Not possible to debug` as no source maps generated |
+| **Optimization**              | Development build are `not optimized` (not minified or treeshaked) | A production build `has all the performance optimization techniques` like Ahead-of-time (AOT) compilation, minification, uglification, and tree-shaking  |
+| **Bundle Size**               | Dev build `bundle size is more/heavier` as compared to prod build | Production build bundle size is `significantly less` than Dev build bundle size |
+| **Optimization Techniques**   | `Not optimised` | Performance optimization techniques like: `Ahead-of-time (AOT) compilation`, `minification`, `uglification` and `tree-shaking` used |
+| **Source Maps**| Yes | No |
+| **Minifaction**| No  | Yes |
+| **Uglification**| No  | Yes |
+| **Tree Shaking**| No  | Yes |
+| **Extracts CSS**| .js file  | .css file |
+| **AOT**| No  | Yes |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+### Table: Angular CLI ng build commands
+
+<div class="table-nuild">
+
+| **Angular CLI command**                   | **Description**                           |
+| ------------------------------------------|-------------------------------------------|
+| `ng build --sourceMap ` OR <br/> `ng build --source-map` OR <br/>`ng build -sm`       | If true, generate build with source maps, Output sourcemaps          |
+| `ng build --prod --sourceMap true` OR <br/> `ng build --prod --source-map true` OR <br/>`ng build --prod -sm true`      | To generate PRODUCTION build with source maps           |
+| `ng build --dev --sourceMap false` OR <br/> `ng build --dev --source-map false` OR <br/>`ng build --dev -sm false`      | to avoid creation/generation of source maps in DEV build          |
+| `ng build --extractCss ` OR <br/> `ng build --extract-css` OR <br/>`ng build -ec`       | If true, Extract css from global styles into css files instead of js ones          |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+> **Reference:** https://angular.io/guide/deployment
+
+### 5.2.1. Source Maps 
+- A `source map holds information about the original files and can be used to map the code within a compressed file back` to its original position in a source file
+- To improve the performance, the application's all files like JavaScript and CSS files are combined and compressed, so it's extremely difficult to debug those compressed files in case of any error or testing
+- So with the help of these source maps, we can easily debug our applications even after the files are compressed and combined after the build process
+- By default, a development build produces/generate source maps whereas a production build does not. We can change this default behavior by using ng build command `--sourcemaps` option, an alias is `-sm`
+
+### 5.2.2. Minification 
+- Minification is a process of compressing the code by removing excess/unwanted whitespace, lines, breaks, comments, and optional tokens like curly brackets and semicolons, etc.
+
+### 5.2.3. Uglification
+- Uglification is a process of compressing the code by transforming the code into an unreadable form by changing variable names, function names (short variable and function names), etc.
+- A Prod Build is both minified and uglified, whereas a Dev Build is not
+- A Prod Build bundle which is minified and uglified version is smaller in size than the full version of Dev build file size
+
+### 5.2.4. Tree Shaking 
+- Tree shaking is the process of removing any extra code that we are not actually using in our application
+- Tree shaking is one of the most effective techniques to reduce the application size
+
+### 5.2.5. Extracts CSS
+- Extract CSS is nothing but its process of generating a bundle of all CSS file used in the application (CSS bundle can be generated in .JS file or .CSS file) 
+- The development build global styles are extracted to `.js` files whereas with the production build they are extracted to `.css` files
+
+### 5.2.6. Ahead-of-Time (AOT) Compilation 
+- A Production build we get AOT (Ahead-of-Time) compilation, i.e the Angular component templates are pre-compiled, whereas development build they are not
+
+5.3. Angular AOT vs JIT
+---------------------
+Angular offers two different models/modes/ways to compile your application:
+1. **Just-in-Time (JIT) compilation** -  which compiles your app in the browser at runtime
+2. **Ahead-of-Time (AOT) compilation** -  which compiles your app at build time
+
+### Table: Angular AOT vs JIT
+
+<div class="table-aot">
+
+| **AOT**                                   | **JIT**                                   |
+| ------------------------------------------|-------------------------------------------|
+| Ahead-of-Time Compilation                 | Just-in-Time Compilation                  |
+| Command: ng build --aot                   | ng build OR ng build --dev                |
+| AOT compilation compiles the application at `build time` before previewing into browser | JIT compilation compiles the application `in the browser at runtime `    |
+| By default, with the prod build we get AOT compilation         | By default, with the development build, we get JIT compilation                      |
+| Tree Shacking, Minification, Uglication took place | No Tree Shacking, Minification, Uglication done here           |
+| Ahead-of-Time Compilation does not need/require angular compiler as AOT performs at build time | For Just-in-Time Compilation the `browser needs to download the angular compiler`                 |
+| With AOT compilation the angular application is `pre-compiled` and then loaded into the browser  | In case of JIt, at run-time, when a request is issued to the application, the `JIT-compiler in the browser compiles the application code`          |
+| As AOT compilation the angular application is `pre-compiled`, `user need not have to wait`               | While the application is being JIT compiled in the browser, `users have to wait`                 |
+| With AOT the `template binding errors will come to know at build time`                 | With JIT the `template binding errors are only known at run time in browser`   |
+| Vendor bundle is `lesser` in size (as compilation is already done). By default, the production build is Ahead-of-Time compiled, So there is no need to bundle up the angular compiler code in the vendor bundle. This brings down the vendor bundle size by almost 50%. Also, its minified, uglified and tree-shaked so the bundler size is further reduced.                  | Vendor bundle is `heavy` in size (as compilation is done at a later stage, the browser needs to download angular compiler). For Just-in-Time Compilation the `browser needs to download the angular compiler` which is roughly half size of Angular Framework and so Dev Build bundle is heavy in size                        |
+| Ahead-of-Time Compilation                 | Just-in-Time Compilation                  |
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+> **Note**: By default, the following 2 commands use JIT compilation 
+- ng build OR ng build --dev
+- ng serve
+
+> **Note**: We can use --aot option to turn on Ahead-of-Time compilation 
+- ng build --aot OR ng build --dev --aot
+- ng serve --aot
+
+> **Reference:** https://angular.io/guide/aot-compiler
+
+06 Angular CLI Command List
+=====================
+### Table: Difference between dev build and prod build (dev build VS prod build)
+
+<div class="table-cli-command-list">
+
+| **Command**                   | **Example**                         | **Description**                 |
+| ------------------------------| ------------------------------------|---------------------------------|
+| ng --help                     | ng --help OR ng -h                  | Getting Angular CLI help. Lists available Angular CLI commands and their short descriptions        |  
+|                               | ng generate --help OR ng --help version  | Getting Angular on a specific command. Get help on generate and version command |   
+| ng new                        | ng new &lt;project-app-name&gt; <br/>  ng new firstAngularCliApp   | Creating New Angular Project/App. Create an Angular application that already works, right out of the box with our best practices! Creates a new Angular project. By default, the project is created under the current directory itself        | 
+| ng serve                      | ng serve                            | Build and run the app (start the lite server). ng serve command builds an app and serve it locally, the server automatically rebuilds the app and reloads the page when you change any of the source files | 
+|                               | ng serve --open OR ng serve -o      | Open served app in default browser |
+| ng doc                        | ng doc &lt;command&gt; OR ng doc &lt;keyword&gt; | Getting online help of any given command. ng doc command opens the official Angular documentation (https://angular.io) in a browser, and searches for a given keyword |
+|                               | g doc version                        | This will open web page https://angular.io/api?query=version and shows appropriate documentation for version command |
+| ng generate                   | ng generate &lt;component&gt;/&lt;service&gt;/&lt;directive&gt;/&lt;pipe&gt; | Scaffolding of files/code inside angular project. Scaffolding/Generate Components, Services, Directives, Pipes, etc. with a simple command. The CLI will also create simple test shells for all of these |
+|                               | ng generate component Header OR ng g c Header  | Generate component named header |
+|                               | ng generate service data-service OR ng g s data-service | Generate service named data-service |
+|                               | ng generate directive BlueHighlight OR ng g d BlueHighlight | Generate directive named BlueHighlight|
+|                               | ng generate pipe odd-even-pipe OR ng g p odd-even-pipe  | Generate pipe named odd-even-pipe |
+| ng version                    | ng -v OR ng version OR ng --version  | Outputs Angular CLI/Node/NPM version |
+| ng test                       | ng test                              | Runs all the unit tests in a project (all the unit test name like  .spec.ts will run using karma/Jasmin)|
+| ng e2e                        | ng e2e OR ng e                       | Builds and serves an Angular app, then runs end-to-end tests using Protractor from e2e folder of an angular app|
+| ng lint                       | ng lint OR ng l                      | Run the codelyzer linter in an Angular project for analyzing the potential error in code line by line. Runs linting tools on Angular app code in a given project folder|
+| ng build                      | ng build OR ng b                     | Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory|
+
+<!-- | <img width="550px" />                     |  &nbsp;                                   |  -->
+
+</div>
+
+07 Angular CLI Resources
+=====================  
+
+> **Reference:** - https://angular.io/cli
+
+> **Reference:** - https://github.com/angular/angular-cli
